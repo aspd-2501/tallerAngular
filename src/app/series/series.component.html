@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table table-stripped">
+      <thead>
+        <tr>
+          <th class="h4">#</th>
+          <th class="h4">Name</th>
+          <th class="h4">Channel</th>
+          <th class="h4">Seasons</th>
+        </tr>
+      </thead>
+      <tbody id="series">
+        <tr *ngFor= "let s of series" >
+          <td>
+            <dd>{{s.num}}</dd>
+          </td>
+          <td>
+            <dd>{{s.name}}</dd>
+          </td>
+          <td>
+            <dd>{{s.channel}}</dd>
+          </td>
+          <td>
+            <dd>{{s.seasons}}</dd>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
