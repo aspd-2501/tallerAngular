@@ -10,10 +10,15 @@ import { SeriesService } from './series.service';
 export class SeriesComponent implements OnInit {
 
   series: Array<Serie> = [];
+  average = 0;
 
   getSeries() {
     this.seriesService.getSeries().subscribe(series => {
+      series.forEach(serie => {
+        this.average += serie.seasons
+      })
       this.series = series;
+      this.average = this.average / series.length;
     });
   }
 
